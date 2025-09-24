@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+void playBeats(int n) {
+    if (n == 0) return;
+    playBeats(n - 1);
+    cout << n << " ";
+}
+
+void playBeatsReverse(int n) {
+    if (n == 0) return;
+    cout << n << " ";
+    playBeatsReverse(n - 1);
+}
+
+int main() {
+    int n;
+    cout << "Enter the number of beats: ";
+    cin >> n;
+
+    cout << "Beats in order: ";
+    playBeats(n);
+    cout << endl;
+
+    cout << "Beats in reverse order: ";
+    playBeatsReverse(n);
+    cout << endl;
+
+    return 0;
+}
